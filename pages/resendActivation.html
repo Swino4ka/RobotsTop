@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#171a12">
+	<title>Activate account | RobotsTop</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/app.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+	<div class="page-shell">
+		<header class="site-header">
+			<a class="brand" href="../index.html" aria-label="RobotsTop home">
+				<button>RobotsTop (Use this button to go back to navigation page)</button>
+			</a>
+			<a class="header-link" href="../index.html">← Home</a>
+		</header>
+		<main class="form-layout">
+			<figure class="official-logo">
+				<img src="../images/thing.png" alt="Geometry Dash account manager logo">
+				<figcaption class="site-notice">This is an unofficial fan-made redesign. This page is not affiliated
+					with, endorsed by, or operated by RobTop Games. Geometry Dash and its logos are the property of
+					their respective owners and are used here for identification purposes only. This page is a UI
+					redesign concept and does not provide official account management or account recovery services. For
+					official account services, visit <a href="https://www.boomlings.com/">Boomlings</a>.</figcaption>
+			</figure>
+			<section class="form-card">
+				<h1>Activate your account</h1>
+				<p class="form-intro">Enter your email address and we'll resend your account activation link.</p>
+				<form action="./resendActivation.php" method="post" enctype="multipart/form-data">
+					<fieldset>
+						<legend>Resend activation</legend>
+						<div class="field"><label for="email">Email</label><input name="email" type="text" id="email"
+								maxlength="75" autocomplete="email"></div>
+						<div class="captcha-wrap">
+							<div class="g-recaptcha" data-sitekey="6LeLCGcUAAAAACTr37ion5rWw-yDlAuFxDJgRz6w"
+								data-callback="enableBtn"></div>
+						</div>
+						<button type="submit" id="button1" name="resend" value="resend" class="submit-button"
+							disabled>Submit</button>
+					</fieldset>
+				</form>
+				<form class="back-form" action="./accountManagement.php" method="post"><button class="back-button"
+						name="back" type="submit" value="Back">Back to account</button></form>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>

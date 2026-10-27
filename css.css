@@ -1,0 +1,2 @@
+/* Just separate file for the global css, can directly call the style.css instead of this if not going to add globals */
+@import url("css/style.css");
